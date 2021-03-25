@@ -17,6 +17,7 @@ endif
 AM_CFLAGS = $(COGL_DEP_CFLAGS) $(COGL_EXTRA_CFLAGS) $(MAINTAINER_CFLAGS)
 
 libcogl_gles2_la_SOURCES = cogl-gles2-api.c
+libcogl_gles2_la_LIBADD  = $(top_builddir)/cogl/libcogl.la
 libcogl_gles2_la_LDFLAGS = \
 	-no-undefined \
 	-version-info @COGL_LT_CURRENT@:@COGL_LT_REVISION@:@COGL_LT_AGE@ \
