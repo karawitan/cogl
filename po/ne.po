@@ -6,18 +6,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gnome Nepali Translation Project\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
-"product=cogl&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-04-27 15:54+0000\n"
-"PO-Revision-Date: 2017-10-13 06:29+0545\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/cogl/issues\n"
+"POT-Creation-Date: 2020-06-04 12:07+0000\n"
+"PO-Revision-Date: 2021-04-22 21:00+0545\n"
+"Last-Translator: Pawan Chitrakar <chautari@gmail.com>\n"
 "Language-Team: Nepali Translation Team <chautari@gmail.com>\n"
+"Language: ne\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.4\n"
-"Last-Translator: Pawan Chitrakar <chautari@gmail.com>\n"
+"X-Generator: Poedit 2.4.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: ne\n"
 
 #: cogl/cogl-debug.c:181
 msgid "Supported debug values:"
@@ -69,7 +68,7 @@ msgstr "कोगल विकल्पहरू देखाउनुहोस�
 #: cogl/cogl-debug-options.h:196
 #, fuzzy
 msgid "Cogl Tracing"
-msgstr "अनुरेखण गर्दा त्रुटि भेटियो"
+msgstr "%s मा रूट पद चिन्ह गर्दैछ"
 
 #: cogl/cogl-debug-options.h:34
 msgid "CoglObject references"
@@ -89,28 +88,25 @@ msgid "debug the creation of texture slices"
 msgstr ""
 
 #: cogl/cogl-debug-options.h:44
-#, fuzzy
 msgid "Trace Atlas Textures"
-msgstr "YUV बनावट समर्थित छैनन्"
+msgstr "ट्रेस एटलस बनावट"
 
 #: cogl/cogl-debug-options.h:45
 msgid "Debug texture atlas management"
-msgstr ""
+msgstr "डिबग बनावट एटिलास व्यवस्थापन"
 
 #: cogl/cogl-debug-options.h:49
 #, fuzzy
 msgid "Trace Blend Strings"
-msgstr "मिसाउनुहोस्"
+msgstr "पदचिन्ह"
 
 #: cogl/cogl-debug-options.h:50
-#, fuzzy
 msgid "Debug CoglBlendString parsing"
-msgstr "स्टोरोबोर्ड फाइल पद वर्णन गर्दैछ"
+msgstr "त्रुटि सच्याउने CoglBlend स्ट्रिङ पद वर्णन"
 
 #: cogl/cogl-debug-options.h:54
-#, fuzzy
 msgid "Trace Journal"
-msgstr "जर्नल"
+msgstr "ट्रेस जर्नल"
 
 #: cogl/cogl-debug-options.h:55
 msgid "View all the geometry passing through the journal"
@@ -123,31 +119,27 @@ msgstr "पदचिन्ह"
 
 #: cogl/cogl-debug-options.h:60
 msgid "Show how geometry is being batched in the journal"
-msgstr ""
+msgstr "जर्नलमा कसरी ज्यामिति कोरिएको छ देखाउनुहोस्"
 
 #: cogl/cogl-debug-options.h:64
-#, fuzzy
 msgid "Trace matrices"
-msgstr "म्याट्रिक्सहरूको प्रत्यक्ष योगफल"
+msgstr "म्याट्रिक्सहरू ट्रेस गर्नुहोस्"
 
 #: cogl/cogl-debug-options.h:65
-#, fuzzy
 msgid "Trace all matrix manipulation"
-msgstr "म्याट्रिक्स म्यानिपुलेसन"
+msgstr "सबै म्याट्रिक्स म्यानिपुलेसन ट्रेस गर्नुहोस्"
 
 #: cogl/cogl-debug-options.h:70
-#, fuzzy
 msgid "Trace Misc Drawing"
-msgstr "केहि फरक रेखाचित्र सञ्चालनहरू ट्रेस गर्नुहोस्"
+msgstr "विविध रेखाचित्र ट्रेस गर्नुहोस्"
 
 #: cogl/cogl-debug-options.h:71
 msgid "Trace some misc drawing operations"
 msgstr "केहि फरक रेखाचित्र सञ्चालनहरू ट्रेस गर्नुहोस्"
 
 #: cogl/cogl-debug-options.h:75
-#, fuzzy
 msgid "Trace Pango Renderer"
-msgstr "कोगल पाङ्गो रेन्डरर ट्रेस गर्नुहोस्"
+msgstr "पाङ्गो रेन्डरर ट्रेस गर्नुहोस्"
 
 #: cogl/cogl-debug-options.h:76
 msgid "Trace the Cogl Pango renderer"
@@ -175,9 +167,8 @@ msgid "Add wire outlines for all rectangular geometry"
 msgstr "सबै आयताकार ज्यामितिका लागि तार रूपरेखाहरू थप्नुहोस्"
 
 #: cogl/cogl-debug-options.h:90
-#, fuzzy
 msgid "Show wireframes"
-msgstr "यसका लागि देखाउनुहोस्"
+msgstr "तार फ्रेमहरू देखाउनुहोस्"
 
 #: cogl/cogl-debug-options.h:91
 msgid "Add wire outlines for all geometry"
@@ -208,24 +199,23 @@ msgstr "ठाडो जीएल बफरहरू अक्षम गर्�
 
 #: cogl/cogl-debug-options.h:101
 msgid "Disable use of OpenGL vertex buffer objects"
-msgstr ""
+msgstr "OpenGL कोणिय बिन्दु वस्तुको प्रयोग अक्षम पार्नुहोस्"
 
 #: cogl/cogl-debug-options.h:105
-#, fuzzy
 msgid "Disable GL Pixel Buffers"
-msgstr "ठाडो जीएल बफरहरू अक्षम गर्नुहोस्"
+msgstr "जीएल पिक्सेल बफर अक्षम पार्नुहोस्"
 
 #: cogl/cogl-debug-options.h:106
 msgid "Disable use of OpenGL pixel buffer objects"
-msgstr ""
+msgstr "OpenGL पिक्सेल बफर वस्तुको प्रयोग अक्षम पार्नुहोस्"
 
 #: cogl/cogl-debug-options.h:110
 msgid "Disable software rect transform"
-msgstr ""
+msgstr "सफ्टवेयर आयात रुपान्तरण अक्षम पार्नुहोस्"
 
 #: cogl/cogl-debug-options.h:111
 msgid "Use the GPU to transform rectangular geometry"
-msgstr ""
+msgstr "आयातकार ज्यामिति रुपान्तरण गर्न GPU प्रयोग गर्नुहोस्"
 
 #: cogl/cogl-debug-options.h:113
 msgid "Cogl Specialist"
@@ -237,19 +227,20 @@ msgstr "एटलस छविहरू डम्प गर्नुहोस्
 
 #: cogl/cogl-debug-options.h:116
 msgid "Dump texture atlas changes to an image file"
-msgstr ""
+msgstr "एउटा छवि फाइलमा परिवर्तन गरिएका बनावट एटलास डम्प गर्नुहोस्"
 
 #: cogl/cogl-debug-options.h:120
 msgid "Disable texture atlasing"
 msgstr "मानचित्र बनावट असक्षम पार्नुहोस्"
 
 #: cogl/cogl-debug-options.h:121
+#, fuzzy
 msgid "Disable use of texture atlasing"
-msgstr ""
+msgstr "मानचित्र बनावट असक्षम पार्नुहोस्"
 
 #: cogl/cogl-debug-options.h:125
 msgid "Disable sharing the texture atlas between text and images"
-msgstr ""
+msgstr "पाठ र छवि बीचमा बनावट atlas साझेदारी अक्षम पार्नुहोस्"
 
 #: cogl/cogl-debug-options.h:126
 msgid ""
@@ -266,13 +257,12 @@ msgid "Disable texturing any primitives"
 msgstr "कुनै पनि पुरानो बनावट असक्षम पार्नुहोस्"
 
 #: cogl/cogl-debug-options.h:136
-#, fuzzy
 msgid "Disable arbfp"
-msgstr "बन्द​:"
+msgstr "अर्बीएफपी अक्षम पार्नुहोस्"
 
 #: cogl/cogl-debug-options.h:137
 msgid "Disable use of ARB fragment programs"
-msgstr ""
+msgstr "ARB टुक्रा कार्यक्रमको प्रयोग अक्षम पार्नुहोस्"
 
 #: cogl/cogl-debug-options.h:141
 msgid "Disable fixed"
@@ -280,17 +270,15 @@ msgstr "स्थिर असक्षम गर्नुहोस्"
 
 #: cogl/cogl-debug-options.h:142
 msgid "Disable use of the fixed function pipeline backend"
-msgstr ""
+msgstr "स्थिर प्रकार्य पाइपलाइन ब्याकइन्डको प्रयोग अक्षम पार्नुहोस्"
 
 #: cogl/cogl-debug-options.h:146
-#, fuzzy
 msgid "Disable GLSL"
-msgstr "बन्द​:"
+msgstr "GLSL अक्षम पार्नुहोस्"
 
 #: cogl/cogl-debug-options.h:147
-#, fuzzy
 msgid "Disable use of GLSL"
-msgstr "बन्द​:"
+msgstr "GLSL प्रयोग असक्षम गर्नुहोस्"
 
 #: cogl/cogl-debug-options.h:151
 msgid "Disable blending"
@@ -333,17 +321,15 @@ msgstr "केहि फरक रेखाचित्र सञ्चालन
 
 #: cogl/cogl-debug-options.h:173
 msgid "Traces some select OpenGL calls"
-msgstr ""
+msgstr "केही चयन गरिएको OpenGL कलहरू पदचिन्ह गर्दछ"
 
 #: cogl/cogl-debug-options.h:177
-#, fuzzy
 msgid "Trace offscreen support"
-msgstr "समर्थन गर्नुहोस्"
+msgstr "पर्दाबाहिर ट्रेस समर्थन"
 
 #: cogl/cogl-debug-options.h:178
-#, fuzzy
 msgid "Debug offscreen support"
-msgstr "समर्थन गर्नुहोस्"
+msgstr "त्रुटि सच्याउने पर्दाबाहिर समर्थन"
 
 #: cogl/cogl-debug-options.h:182
 msgid "Disable program caches"
@@ -355,7 +341,7 @@ msgstr ""
 
 #: cogl/cogl-debug-options.h:187
 msgid "Disable read pixel optimization"
-msgstr ""
+msgstr "पिक्सेल अनुकूलन पढ्न अक्षम पार्नुहोस्"
 
 #: cogl/cogl-debug-options.h:188
 msgid ""
@@ -365,7 +351,7 @@ msgstr ""
 #: cogl/cogl-debug-options.h:193
 #, fuzzy
 msgid "Trace clipping"
-msgstr "क्लिप गर्दैछ:"
+msgstr "पदचिन्ह"
 
 #: cogl/cogl-debug-options.h:194
 msgid "Logs information about how Cogl is implementing clipping"
@@ -374,7 +360,7 @@ msgstr "कोगलले कसरी क्लिपिङ्ग कार्
 #: cogl/cogl-debug-options.h:198
 #, fuzzy
 msgid "Trace performance concerns"
-msgstr "पदचिन्ह ट्रयाप"
+msgstr "पदचिन्ह"
 
 #: cogl/cogl-debug-options.h:199
 msgid "Tries to highlight sub-optimal Cogl usage."
