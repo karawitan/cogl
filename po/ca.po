@@ -120,7 +120,7 @@ msgstr "Traça els lots"
 
 #: cogl/cogl-debug-options.h:60
 msgid "Show how geometry is being batched in the journal"
-msgstr "Mostra com la geometria és tracta per lots en el diari"
+msgstr "Mostra com la geometria es tracta per lots en el diari"
 
 #: cogl/cogl-debug-options.h:64
 msgid "Trace matrices"
@@ -216,7 +216,7 @@ msgstr "Inhabilita la transformació rectangular per programari"
 
 #: cogl/cogl-debug-options.h:111
 msgid "Use the GPU to transform rectangular geometry"
-msgstr "Utilitza la GPU per transformar la geometria regular"
+msgstr "Utilitza la GPU per a transformar la geometria regular"
 
 #: cogl/cogl-debug-options.h:113
 msgid "Cogl Specialist"
@@ -353,7 +353,7 @@ msgstr "Inhabilita l'optimització de lectura de píxels"
 msgid ""
 "Disable optimization for reading 1px for simple scenes of opaque rectangles"
 msgstr ""
-"Inhabilita l'optimització per llegir 1px d'escenes senzilles de rectangles "
+"Inhabilita l'optimització per a llegir 1px d'escenes senzilles de rectangles "
 "opacs"
 
 #: cogl/cogl-debug-options.h:193
