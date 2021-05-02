@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Gnome Nepali Translation Project\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/cogl/issues\n"
 "POT-Creation-Date: 2020-06-04 12:07+0000\n"
-"PO-Revision-Date: 2021-04-22 21:00+0545\n"
+"PO-Revision-Date: 2021-05-01 21:28+0545\n"
 "Last-Translator: Pawan Chitrakar <chautari@gmail.com>\n"
 "Language-Team: Nepali Translation Team <chautari@gmail.com>\n"
 "Language: ne\n"
@@ -66,9 +66,8 @@ msgstr "कोगल विकल्पहरू देखाउनुहोस�
 #: cogl/cogl-debug-options.h:165 cogl/cogl-debug-options.h:170
 #: cogl/cogl-debug-options.h:175 cogl/cogl-debug-options.h:191
 #: cogl/cogl-debug-options.h:196
-#, fuzzy
 msgid "Cogl Tracing"
-msgstr "%s मा रूट पद चिन्ह गर्दैछ"
+msgstr "Cogl पत्ता लगाउनुहोस्"
 
 #: cogl/cogl-debug-options.h:34
 msgid "CoglObject references"
@@ -76,16 +75,15 @@ msgstr "कोगल वस्तु सन्दर्भहरू"
 
 #: cogl/cogl-debug-options.h:35
 msgid "Debug ref counting issues for CoglObjects"
-msgstr ""
+msgstr "CoglObjects का लागि त्रुटि सच्याउने ref गणना बिषय"
 
 #: cogl/cogl-debug-options.h:39
-#, fuzzy
 msgid "Trace Texture Slicing"
-msgstr "कोगल बनावट पिक्समैप ब्याकइन्ड ट्रेस गर्नुहोस्"
+msgstr "टेक्सचर स्लिसिग ट्रेस"
 
 #: cogl/cogl-debug-options.h:40
 msgid "debug the creation of texture slices"
-msgstr ""
+msgstr "बनावट स्लाइसको सिर्जना त्रुटि सच्याउनुहोस्"
 
 #: cogl/cogl-debug-options.h:44
 msgid "Trace Atlas Textures"
@@ -96,9 +94,8 @@ msgid "Debug texture atlas management"
 msgstr "डिबग बनावट एटिलास व्यवस्थापन"
 
 #: cogl/cogl-debug-options.h:49
-#, fuzzy
 msgid "Trace Blend Strings"
-msgstr "पदचिन्ह"
+msgstr "मिश्रण स्ट्रिङ ट्रेस गर्नुहोस्"
 
 #: cogl/cogl-debug-options.h:50
 msgid "Debug CoglBlendString parsing"
@@ -113,9 +110,8 @@ msgid "View all the geometry passing through the journal"
 msgstr "जर्नलको माध्यमबाट सबै ज्यामिति गएको हेर्नुहोस्"
 
 #: cogl/cogl-debug-options.h:59
-#, fuzzy
 msgid "Trace Batching"
-msgstr "पदचिन्ह"
+msgstr "ट्रेस ब्याचिङ"
 
 #: cogl/cogl-debug-options.h:60
 msgid "Show how geometry is being batched in the journal"
@@ -146,9 +142,8 @@ msgid "Trace the Cogl Pango renderer"
 msgstr "कोगल पाङ्गो रेन्डरर ट्रेस गर्नुहोस्"
 
 #: cogl/cogl-debug-options.h:80
-#, fuzzy
 msgid "Trace CoglTexturePixmap backend"
-msgstr "कोगल बनावट पिक्समैप ब्याकइन्ड ट्रेस गर्नुहोस्"
+msgstr "CoglTexturePixmap ब्याकइन्ड ट्रेस गर्नुहोस्"
 
 #: cogl/cogl-debug-options.h:81
 msgid "Trace the Cogl texture pixmap backend"
@@ -234,9 +229,8 @@ msgid "Disable texture atlasing"
 msgstr "मानचित्र बनावट असक्षम पार्नुहोस्"
 
 #: cogl/cogl-debug-options.h:121
-#, fuzzy
 msgid "Disable use of texture atlasing"
-msgstr "मानचित्र बनावट असक्षम पार्नुहोस्"
+msgstr "atlasing बनावट को प्रयोग अक्षम पार्नुहोस्"
 
 #: cogl/cogl-debug-options.h:125
 msgid "Disable sharing the texture atlas between text and images"
@@ -247,6 +241,8 @@ msgid ""
 "When this is set the glyph cache will always use a separate texture for its "
 "atlas. Otherwise it will try to share the atlas with images."
 msgstr ""
+"जब यो सेट हुन्छ, ग्लिफ क्यासले यसको एट्लस का लागि सधै छुट्टै बनावट प्रयोग गर्नेछ । अन्यथा "
+"यसले चित्रसँग एट्लस साझेदारी गर्ने प्रयास गर्नेछ ।"
 
 #: cogl/cogl-debug-options.h:131
 msgid "Disable texturing"
@@ -290,13 +286,15 @@ msgstr "मिश्रणको प्रयोग असक्षम गर्
 
 #: cogl/cogl-debug-options.h:156
 msgid "Disable non-power-of-two textures"
-msgstr ""
+msgstr "दुई बनावटहरूको शक्ति-विहिन अक्षम पार्नुहोस्"
 
 #: cogl/cogl-debug-options.h:157
 msgid ""
 "Makes Cogl think that the GL driver doesn't support NPOT textures so that it "
 "will create sliced textures or textures with waste instead."
 msgstr ""
+"कोगलले सोच्नुहोस् कि जीएल ड्राइभरले एनपोट बनावटलाई समर्थन गर्दैन जसले गर्दा यसले सट्टामा "
+"फोहोरसँग टुक्रा गरिएको बनावट वा बनावट सिर्जना गर्नेछ ।"
 
 #: cogl/cogl-debug-options.h:162
 msgid "Disable software clipping"
@@ -312,12 +310,11 @@ msgstr "स्रोत देखाउनुहोस्"
 
 #: cogl/cogl-debug-options.h:168
 msgid "Show generated ARBfp/GLSL source code"
-msgstr ""
+msgstr "सिर्जना गरिएको ARBfp/GLSL स्रोत सङ्केत देखाउनुहोस्"
 
 #: cogl/cogl-debug-options.h:172
-#, fuzzy
 msgid "Trace some OpenGL"
-msgstr "केहि फरक रेखाचित्र सञ्चालनहरू ट्रेस गर्नुहोस्"
+msgstr "केही OpenGL पदचिन्ह गर्नुहोस्"
 
 #: cogl/cogl-debug-options.h:173
 msgid "Traces some select OpenGL calls"
@@ -337,7 +334,7 @@ msgstr "कार्यक्रम क्यासहरू असक्षम 
 
 #: cogl/cogl-debug-options.h:183
 msgid "Disable fallback caches for arbfp and glsl programs"
-msgstr ""
+msgstr "arbfp र glsl कार्यक्रमका लागि फलब्याक क्यास अक्षम पार्नुहोस्"
 
 #: cogl/cogl-debug-options.h:187
 msgid "Disable read pixel optimization"
@@ -347,20 +344,19 @@ msgstr "पिक्सेल अनुकूलन पढ्न अक्षम
 msgid ""
 "Disable optimization for reading 1px for simple scenes of opaque rectangles"
 msgstr ""
+"अपारदर्शी आयातहरूको सामान्य दृश्यका लागि १px पढ्नका लागि अप्टिमाईजेसन अक्षम पार्नुहोस्"
 
 #: cogl/cogl-debug-options.h:193
-#, fuzzy
 msgid "Trace clipping"
-msgstr "पदचिन्ह"
+msgstr "ट्रेस क्लिपिङ"
 
 #: cogl/cogl-debug-options.h:194
 msgid "Logs information about how Cogl is implementing clipping"
 msgstr "कोगलले कसरी क्लिपिङ्ग कार्यान्वयन गर्दैछ भन्ने जानकारी लगाउँछ"
 
 #: cogl/cogl-debug-options.h:198
-#, fuzzy
 msgid "Trace performance concerns"
-msgstr "पदचिन्ह"
+msgstr "कार्यसम्पादन सरोकार ट्रेस गर्नुहोस्"
 
 #: cogl/cogl-debug-options.h:199
 msgid "Tries to highlight sub-optimal Cogl usage."
