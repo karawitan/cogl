@@ -31,12 +31,18 @@ libcogl_gst_la_LDFLAGS = \
 
 AM_CPPFLAGS = \
 	-DCOGL_COMPILATION		\
-	-DG_LOG_DOMAIN=\"CoglGst\"	\
+	-DG_LOG_DOMAIN=\"CoglGst\" \
 	-I$(top_srcdir)/cogl		\
 	-I$(top_builddir)/cogl		\
 	-I$(top_srcdir)/cogl/winsys	\
 	-I$(top_srcdir)			\
-	-I$(top_builddir)
+	-I$(top_builddir)		\
+	$(GST_CFLAGS)
+
+AM_CFLAGS = \
+	$(GST_CFLAGS) \
+	$(COGL_CFLAGS) \
+	$(WARN_CFLAGS)
 
 cogl_gstheadersdir = $(includedir)/cogl/cogl-gst
 cogl_gstheaders_HEADERS = $(source_h)

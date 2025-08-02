@@ -31,6 +31,10 @@
 #define __COGL_GST_VIDEO_SINK_H__
 #include <glib-object.h>
 #include <gst/base/gstbasesink.h>
+#include <gst/gst.h>
+#include <gst/video/video.h>
+#include "cogl-gst-source.h"
+#include "cogl-gst-renderer.h"
 
 /* We just need the public Cogl api for cogl-gst but we first need to
  * undef COGL_COMPILATION to avoid getting an error that normally
@@ -38,8 +42,6 @@
 #ifdef COGL_COMPILATION
 #undef COGL_COMPILATION
 #endif
-
-#include <cogl/cogl.h>
 
 #include <cogl/cogl.h>
 
@@ -115,6 +117,62 @@ G_BEGIN_DECLS
 
 typedef struct _CoglGstVideoSink CoglGstVideoSink;
 typedef struct _CoglGstVideoSinkClass CoglGstVideoSinkClass;
+
+typedef struct _CoglGstVideoSinkPrivate CoglGstVideoSinkPrivate;
+
+struct _CoglGstVideoSinkPrivate
+{
+  CoglContext *ctx;
+  CoglPipeline *pipeline;
+  CoglPipeline *pipeline_bgr;
+  CoglPipeline *pipeline_yuv;
+  CoglPipeline *pipeline_yv12;
+  CoglPipeline *pipeline_i420;
+  CoglPipeline *pipeline_nv12;
+  CoglPipeline *pipeline_ayuv;
+  CoglPipeline *pipeline_rgb32;
+  CoglPipeline *pipeline_rgb24;
+  CoglPipeline *pipeline_gl;
+  CoglPipeline *pipeline_gl_bgr;
+  CoglPipeline *pipeline_gl_yuv;
+  CoglPipeline *pipeline_gl_yv12;
+  CoglPipeline *pipeline_gl_i420;
+  CoglPipeline *pipeline_gl_nv12;
+  CoglPipeline *pipeline_gl_ayuv;
+  CoglPipeline *pipeline_gl_rgb32;
+  CoglPipeline *pipeline_gl_rgb24;
+  int free_layer;
+  CoglBool default_sample;
+  GstVideoInfo info;
+  CoglBool frame_dirty;
+  CoglTexture *frame[4];
+  CoglGstRenderer *renderer;
+  CoglGstSource *source;
+  CoglGstRenderer *renderer_gl;
+  CoglGstSource *source_gl;
+  int update_priority;
+  GSource *update_source;
+  CoglBool pipeline_ready;
+  CoglBool pipeline_ready_gl;
+  CoglBool pipeline_ready_bgr;
+  CoglBool pipeline_ready_yuv;
+  CoglBool pipeline_ready_yv12;
+  CoglBool pipeline_ready_i420;
+  CoglBool pipeline_ready_nv12;
+  CoglBool pipeline_ready_ayuv;
+  CoglBool pipeline_ready_rgb32;
+  CoglBool pipeline_ready_rgb24;
+  CoglBool pipeline_ready_gl_bgr;
+  CoglBool pipeline_ready_gl_yuv;
+  CoglBool pipeline_ready_gl_yv12;
+  CoglBool pipeline_ready_gl_i420;
+  CoglBool pipeline_ready_gl_nv12;
+  CoglBool pipeline_ready_gl_ayuv;
+  CoglBool pipeline_ready_gl_rgb32;
+  CoglBool pipeline_ready_gl_rgb24;
+  int custom_start;
+};
+
 typedef struct _CoglGstVideoSinkPrivate CoglGstVideoSinkPrivate;
 
 /**

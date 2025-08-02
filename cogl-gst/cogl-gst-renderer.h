@@ -27,33 +27,51 @@
  * SOFTWARE.
  */
 
-#ifdef HAVE_CONFIG_H
-#include "config.h"
-#endif
+#ifndef __COGL_GST_RENDERER_H__
+#define __COGL_GST_RENDERER_H__
 
+#include <glib-object.h>
 #include <gst/gst.h>
 #include <gst/video/video.h>
-
 #include "cogl-gst-video-sink.h"
 
-#define PACKAGE "CoglGst"
-#define VERSION "1.22.8"
+G_BEGIN_DECLS
 
-static gboolean
-plugin_init (GstPlugin *plugin)
+typedef enum
 {
-  return gst_element_register (plugin, "coglvideosink",
-        GST_RANK_NONE, cogl_gst_video_sink_get_type());
-}
+  COGL_GST_NOFORMAT,
+  COGL_GST_RGB32,
+  COGL_GST_RGB24,
+  COGL_GST_AYUV,
+  COGL_GST_YV12,
+  COGL_GST_I420,
+  COGL_GST_NV12
+} CoglGstVideoFormat;
 
-GST_PLUGIN_DEFINE (
-    GST_VERSION_MAJOR,
-    GST_VERSION_MINOR,
-    cogl,
-    "Cogl-based video sink",
-    plugin_init,
-    VERSION,
-    "LGPL",
-    "Cogl",
-    "https://gitlab.gnome.org/Archive/cogl"
-)
+typedef enum
+{
+  COGL_GST_RENDERER_NEEDS_GLSL = (1 << 0),
+  COGL_GST_RENDERER_NEEDS_TEXTURE_RG = (1 << 1)
+} CoglGstRendererFlag;
+
+typedef void (CoglGstRendererSetupPipeline) (CoglGstVideoSink *sink,
+                                            GstVideoPipeline *pipeline);
+typedef gboolean (CoglGstRendererUpload) (CoglGstVideoSink *sink,
+                                         GstBuffer *buffer);
+
+typedef struct _CoglGstRenderer CoglGstRenderer;
+
+struct _CoglGstRenderer
+{
+  const char *name;
+  CoglGstVideoFormat format;
+  int flags;
+  GstStaticCaps caps;
+  int n_layers;
+  CoglGstRendererSetupPipeline *setup_pipeline;
+  CoglGstRendererUpload *upload;
+};
+
+G_END_DECLS
+
+#endif /* __COGL_GST_RENDERER_H__ */

@@ -265,7 +265,7 @@ G_PASTE (_cogl_unpack_rgba_1010102_, component_size) (const uint8_t *src,
       dst[2] = UNPACK_10 ((v >> 2) & 1023);
       dst[3] = UNPACK_2 (v & 3);
       dst += 4;
-      src += 2;
+      src += 4;
     }
 }
 
@@ -283,7 +283,7 @@ G_PASTE (_cogl_unpack_bgra_1010102_, component_size) (const uint8_t *src,
       dst[0] = UNPACK_10 ((v >> 2) & 1023);
       dst[3] = UNPACK_2 (v & 3);
       dst += 4;
-      src += 2;
+      src += 4;
     }
 }
 
@@ -301,7 +301,7 @@ G_PASTE (_cogl_unpack_argb_2101010_, component_size) (const uint8_t *src,
       dst[1] = UNPACK_10 ((v >> 10) & 1023);
       dst[2] = UNPACK_10 (v & 1023);
       dst += 4;
-      src += 2;
+      src += 4;
     }
 }
 
@@ -319,7 +319,7 @@ G_PASTE (_cogl_unpack_abgr_2101010_, component_size) (const uint8_t *src,
       dst[1] = UNPACK_10 ((v >> 10) & 1023);
       dst[0] = UNPACK_10 (v & 1023);
       dst += 4;
-      src += 2;
+      src += 4;
     }
 }
 
@@ -565,11 +565,11 @@ G_PASTE (_cogl_pack_rgb_565_, component_size) (const component_type *src,
 {
   while (width-- > 0)
     {
-      uint16_t *v = (uint16_t *) dst;
-
-      *v = ((PACK_5 (src[0]) << 11) |
-            (PACK_6 (src[1]) << 5) |
-            PACK_5 (src[2]));
+      uint16_t v;
+      v = ((PACK_5 (src[0]) << 11) |
+           (PACK_6 (src[1]) << 5) |
+           PACK_5 (src[2]));
+      memcpy(dst, &v, sizeof(v));
       src += 4;
       dst += 2;
     }
@@ -582,12 +582,12 @@ G_PASTE (_cogl_pack_rgba_4444_, component_size) (const component_type *src,
 {
   while (width-- > 0)
     {
-      uint16_t *v = (uint16_t *) dst;
-
-      *v = ((PACK_4 (src[0]) << 12) |
-            (PACK_4 (src[1]) << 8) |
-            (PACK_4 (src[2]) << 4) |
-            PACK_4 (src[3]));
+      uint16_t v;
+      v = ((PACK_4 (src[0]) << 12) |
+           (PACK_4 (src[1]) << 8) |
+           (PACK_4 (src[2]) << 4) |
+           PACK_4 (src[3]));
+      memcpy(dst, &v, sizeof(v));
       src += 4;
       dst += 2;
     }
@@ -600,12 +600,12 @@ G_PASTE (_cogl_pack_rgba_5551_, component_size) (const component_type *src,
 {
   while (width-- > 0)
     {
-      uint16_t *v = (uint16_t *) dst;
-
-      *v = ((PACK_5 (src[0]) << 11) |
-            (PACK_5 (src[1]) << 6) |
-            (PACK_5 (src[2]) << 1) |
-            PACK_1 (src[3]));
+      uint16_t v;
+      v = ((PACK_5 (src[0]) << 11) |
+           (PACK_5 (src[1]) << 6) |
+           (PACK_5 (src[2]) << 1) |
+           PACK_1 (src[3]));
+      memcpy(dst, &v, sizeof(v));
       src += 4;
       dst += 2;
     }
@@ -618,12 +618,12 @@ G_PASTE (_cogl_pack_rgba_1010102_, component_size) (const component_type *src,
 {
   while (width-- > 0)
     {
-      uint32_t *v = (uint32_t *) dst;
-
-      *v = ((PACK_10 (src[0]) << 22) |
-            (PACK_10 (src[1]) << 12) |
-            (PACK_10 (src[2]) << 2) |
-            PACK_2 (src[3]));
+      uint32_t v;
+      v = ((PACK_10 (src[0]) << 22) |
+           (PACK_10 (src[1]) << 12) |
+           (PACK_10 (src[2]) << 2) |
+           PACK_2 (src[3]));
+      memcpy(dst, &v, sizeof(v));
       src += 4;
       dst += 4;
     }
@@ -636,12 +636,12 @@ G_PASTE (_cogl_pack_bgra_1010102_, component_size) (const component_type *src,
 {
   while (width-- > 0)
     {
-      uint32_t *v = (uint32_t *) dst;
-
-      *v = ((PACK_10 (src[2]) << 22) |
-            (PACK_10 (src[1]) << 12) |
-            (PACK_10 (src[0]) << 2) |
-            PACK_2 (src[3]));
+      uint32_t v;
+      v = ((PACK_10 (src[2]) << 22) |
+           (PACK_10 (src[1]) << 12) |
+           (PACK_10 (src[0]) << 2) |
+           PACK_2 (src[3]));
+      memcpy(dst, &v, sizeof(v));
       src += 4;
       dst += 4;
     }
@@ -654,12 +654,12 @@ G_PASTE (_cogl_pack_argb_2101010_, component_size) (const component_type *src,
 {
   while (width-- > 0)
     {
-      uint32_t *v = (uint32_t *) dst;
-
-      *v = ((PACK_2 (src[3]) << 30) |
-            (PACK_10 (src[0]) << 20) |
-            (PACK_10 (src[1]) << 10) |
-            PACK_10 (src[2]));
+      uint32_t v;
+      v = ((PACK_2 (src[3]) << 30) |
+           (PACK_10 (src[0]) << 20) |
+           (PACK_10 (src[1]) << 10) |
+           PACK_10 (src[2]));
+      memcpy(dst, &v, sizeof(v));
       src += 4;
       dst += 4;
     }
@@ -672,12 +672,12 @@ G_PASTE (_cogl_pack_abgr_2101010_, component_size) (const component_type *src,
 {
   while (width-- > 0)
     {
-      uint32_t *v = (uint32_t *) dst;
-
-      *v = ((PACK_2 (src[3]) << 30) |
-            (PACK_10 (src[2]) << 20) |
-            (PACK_10 (src[1]) << 10) |
-            PACK_10 (src[0]));
+      uint32_t v;
+      v = ((PACK_2 (src[3]) << 30) |
+           (PACK_10 (src[2]) << 20) |
+           (PACK_10 (src[1]) << 10) |
+           PACK_10 (src[0]));
+      memcpy(dst, &v, sizeof(v));
       src += 4;
       dst += 4;
     }

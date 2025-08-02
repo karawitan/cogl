@@ -44,3 +44,6 @@ DISTCHECK_CONFIGURE_FLAGS = \
 	--enable-cogl-gst
 
 include $(top_srcdir)/build/autotools/Makefile.am.release
+
+CoglGst_2_0_gir_LIBS = $(GST_LIBS)
+CoglGst_2_0_gir_CFLAGS = $(GST_CFLAGS)
