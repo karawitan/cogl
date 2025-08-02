@@ -105,3 +105,4 @@ TAGS
 *.rej
 .DS_Store
 .testlogs-*
+*tmp-introspect*
